@@ -1,0 +1,3 @@
+[submodule "iziModal"]
+	path = iziModal
+	url = https://github.com/dolce/iziModal.git
