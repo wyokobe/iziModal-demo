@@ -2,17 +2,10 @@
 
 <head>
   <title>03.html</title>
-</head>
-
-<body>
+  <link rel="stylesheet" type="text/css" href="./css/iziModal.css" media="screen" />
   <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="./js/jquery-migrate-3.0.1.min.js"></script>
   <script type="text/javascript" src="./js/iziModal.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="./css/iziModal.css" media="screen" />
-  <button data-iziModal-open=".iziModal">button</button>
-  <div class="iziModal" data-izimodal-title="タイトル" data-izimodal-subtitle="サブタイトル" data-izimodal-iframeURL="https://www.youtube.com/embed/C-43sV-kLM4">
-    <!-- / .iziModal -->
-  </div>
   <script type="text/javascript">
     $(function() {
       $(".iziModal").iziModal({
@@ -23,6 +16,37 @@
       });
     })
   </script>
+</head>
+
+<body>
+  <style>
+    .square_btn {
+      display: inline-block;
+      padding: 0.5em 1em;
+      text-decoration: none;
+      background: #668ad8;
+      /*ボタン色*/
+      color: #FFF;
+      border-bottom: solid 4px #627295;
+      border-radius: 3px;
+    }
+
+    .square_btn:active {
+      /*ボタンを押したとき*/
+      -ms-transform: translateY(4px);
+      -webkit-transform: translateY(4px);
+      transform: translateY(4px);
+      /*下に動く*/
+      border-bottom: none;
+      /*線を消す*/
+    }
+  </style>
+  <div>
+    <button class="square_btn" data-iziModal-open=".iziModal">button</button>
+  </div>
+  <div class="iziModal" data-izimodal-title="タイトル" data-izimodal-subtitle="サブタイトル" data-izimodal-iframeURL="https://www.youtube.com/embed/C-43sV-kLM4">
+    <!-- / .iziModal -->
+  </div>
 </body>
 
 </html>
