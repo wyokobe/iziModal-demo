@@ -1,0 +1,35 @@
+<html>
+
+<head>
+  <title>02.html</title>
+</head>
+
+<body>
+  <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="./js/jquery-migrate-3.0.1.min.js"></script>
+  <script type="text/javascript" src="./js/iziModal.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./css/iziModal.css" media="screen" />
+  <button data-iziModal-open=".iziModal">button</button>
+  <div class="iziModal" data-izimodal-title="タイトル" data-izimodal-subtitle="サブタイトル">
+    <p>コンテンツ</p>
+    <!-- / .iziModal -->
+  </div>
+  <div class="iziModal" data-izimodal-title="タイトル2" data-izimodal-subtitle="サブタイトル2">
+    <p>コンテンツ2</p>
+    <!-- / .iziModal -->
+  </div>
+  <div class="iziModal" data-izimodal-title="タイトル3" data-izimodal-subtitle="サブタイトル3">
+    <p>コンテンツ3</p>
+    <!-- / .iziModal -->
+  </div>
+  <script type="text/javascript">
+    $(function() {
+      $(".iziModal").iziModal({
+        group: "group01",
+        loop: true,
+      });
+    })
+  </script>
+</body>
+
+</html>
