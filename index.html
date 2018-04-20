@@ -1,0 +1,24 @@
+<html>
+
+  <head>
+    <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script> 
+    <script type="text/javascript" src="./js/jquery-migrate-3.0.1.min.js"></script> 
+    <script type="text/javascript" src="./js/iziModal.min.js"></script> 
+    <link rel="stylesheet" type="text/css" href="./css/iziModal.css" media="screen" />
+  </head>
+
+  <body>
+    <button data-iziModal-open=".iziModal">button</button>
+    <div class="iziModal" data-izimodal-title="" data-izimodal-subtitle="">
+      <p>ここにコンテンツを記述していきます。</p>
+    <!-- / .iziModal -->
+    </div>
+  </body>
+
+</html>
+
+<script type="text/javascript">
+$(function(){
+    $(".iziModal").iziModal();
+})
+</script>
