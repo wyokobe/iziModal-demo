@@ -1,0 +1,28 @@
+<html>
+
+<head>
+  <title>03.html</title>
+</head>
+
+<body>
+  <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="./js/jquery-migrate-3.0.1.min.js"></script>
+  <script type="text/javascript" src="./js/iziModal.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./css/iziModal.css" media="screen" />
+  <button data-iziModal-open=".iziModal">button</button>
+  <div class="iziModal" data-izimodal-title="タイトル" data-izimodal-subtitle="サブタイトル" data-izimodal-iframeURL="https://youtu.be/C-43sV-kLM4">
+    <!-- / .iziModal -->
+  </div>
+  <script type="text/javascript">
+    $(function() {
+      $(".iziModal").iziModal({
+        iframe: true,
+        fullscreen: true,
+        transitionIn: "bounceInDown",
+        transitionOut: "bounceOutDown"
+      });
+    })
+  </script>
+</body>
+
+</html>
