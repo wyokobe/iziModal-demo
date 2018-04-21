@@ -1,43 +1,21 @@
 <html>
 
 <head>
-  <title>04.html</title>
+  <title>モーダル(グループ)toモーダル(iframe)</title>
   <link rel="stylesheet" type="text/css" href="./css/iziModal.css" media="screen" />
   <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="./js/jquery-migrate-3.0.1.min.js"></script>
   <script type="text/javascript" src="./js/iziModal.min.js"></script>
   <script type="text/javascript">
     $(function() {
-      $(".iziModal0").iziModal({
+      $(".iziModal").iziModal({
         group: "group0",
         loop: true,
-      });
-    })
-    $(function() {
-      $(".iziModal1").iziModal({
-        group: "group1",
-        loop: true,
         headerColor: "#91b500",
       });
     })
     $(function() {
-      $(".iziModal2").iziModal({
-        group: "group2",
-        loop: true,
-        headerColor: "#91b500",
-      });
-    })
-    $(function() {
-      $(".iziModal3").iziModal({
-        group: "group3",
-        loop: true,
-        headerColor: "#91b500",
-      });
-    })
-    $(function() {
-      $(".iziModal4").iziModal({
-        group: "group4",
-        loop: true,
+      $(".iziModal_iframe").iziModal({
         iframe: true,
         fullscreen: true,
         headerColor: "#000",
@@ -50,96 +28,45 @@
 </head>
 
 <body>
+  <a href="index.html">TOP</a>
+  <br>
   <style>
     .square_btn {
       display: inline-block;
       padding: 0.5em 1em;
       text-decoration: none;
       background: #668ad8;
-      /*ボタン色*/
       color: #FFF;
       border-bottom: solid 4px #627295;
       border-radius: 3px;
     }
 
     .square_btn:active {
-      /*ボタンを押したとき*/
       -ms-transform: translateY(4px);
       -webkit-transform: translateY(4px);
       transform: translateY(4px);
-      /*下に動く*/
       border-bottom: none;
-      /*線を消す*/
     }
   </style>
   <div style="text-align: center;padding-top: 64px;padding-bottom: 64px;">
-    <button class="square_btn" data-iziModal-open=".iziModal0">button0</button>
+    <button class="square_btn" data-iziModal-open=".iziModal">モーダル(グループ)toモーダル(iframe)デモ</button>
   </div>
-  <div class="iziModal0" data-izimodal-title="タイトル" data-izimodal-subtitle="サブタイトル">
+  <div class="iziModal" data-izimodal-title="ボタンデモ">
     <div style="text-align: center;padding-top: 64px;padding-bottom: 64px;">
-      <p>コンテンツ0-1</p>
-      <button class="square_btn" data-iziModal-open=".iziModal1">button1</button>
-    </div>
-    <div class="iziModal1" data-izimodal-title="タイトル" data-izimodal-subtitle="サブタイトル">
-      <div style="text-align: center;padding-top: 64px;padding-bottom: 64px;">
-        <p>コンテンツ1-1</p>
-        <button class="square_btn" data-iziModal-open=".iziModal0">戻る</button>
-      </div>
+      <button class="square_btn" data-iziModal-open=".iziModal_iframe">オーバーロードⅡ OP / Overlord Season 2 Opening Full『OxT - GO CRY GO』(ENG SUB)</button>
     </div>
   </div>
-  <div class="iziModal0" data-izimodal-title="タイトル" data-izimodal-subtitle="サブタイトル">
+  <div class="iziModal" data-izimodal-title="リンクデモ">
     <div style="text-align: center;padding-top: 64px;padding-bottom: 64px;">
-      <p>コンテンツ0-2</p>
-      <button class="square_btn" data-iziModal-open=".iziModal2">button2</button>
-    </div>
-    <div class="iziModal2" data-izimodal-title="タイトル" data-izimodal-subtitle="サブタイトル">
-      <div style="text-align: center;padding-top: 64px;padding-bottom: 64px;">
-        <p>コンテンツ2-1</p>
-        <button class="square_btn" data-iziModal-open=".iziModal0">戻る</button>
-      </div>
-    </div>
-    <div class="iziModal2" data-izimodal-title="タイトル" data-izimodal-subtitle="サブタイトル">
-      <div style="text-align: center;padding-top: 64px;padding-bottom: 64px;">
-        <p>コンテンツ2-2</p>
-        <button class="square_btn" data-iziModal-open=".iziModal0">戻る</button>
-      </div>
+      <a href="#" data-iziModal-open=".iziModal_iframe">オーバーロードⅡ OP / Overlord Season 2 Opening Full『OxT - GO CRY GO』(ENG SUB)</a>
     </div>
   </div>
-  <div class="iziModal0" data-izimodal-title="タイトル" data-izimodal-subtitle="サブタイトル">
+  <div class="iziModal" data-izimodal-title="画像デモ">
     <div style="text-align: center;padding-top: 64px;padding-bottom: 64px;">
-      <p>コンテンツ0-3</p>
-      <button class="square_btn" data-iziModal-open=".iziModal3">button3</button>
-    </div>
-    <div class="iziModal3" data-izimodal-title="タイトル" data-izimodal-subtitle="サブタイトル">
-      <div style="text-align: center;padding-top: 64px;padding-bottom: 64px;">
-        <p>コンテンツ3-1</p>
-        <button class="square_btn" data-iziModal-open=".iziModal0">戻る</button>
-      </div>
-    </div>
-    <div class="iziModal3" data-izimodal-title="タイトル" data-izimodal-subtitle="サブタイトル">
-      <div style="text-align: center;padding-top: 64px;padding-bottom: 64px;">
-        <p>コンテンツ3-2</p>
-        <button class="square_btn" data-iziModal-open=".iziModal0">戻る</button>
-      </div>
-    </div>
-    <div class="iziModal3" data-izimodal-title="タイトル" data-izimodal-subtitle="サブタイトル">
-      <div style="text-align: center;padding-top: 64px;padding-bottom: 64px;">
-        <p>コンテンツ3-3</p>
-        <button class="square_btn" data-iziModal-open=".iziModal0">戻る</button>
-      </div>
+      <img src="img/maxresdefault.jpg" width=100% data-iziModal-open=".iziModal_iframe"></img>
     </div>
   </div>
-  <div class="iziModal0" data-izimodal-title="タイトル" data-izimodal-subtitle="サブタイトル">
-    <div style="text-align: center;padding-top: 64px;padding-bottom: 64px;">
-      <button class="square_btn" data-iziModal-open=".iziModal4">button4</button>
-    </div>
-    <div class="iziModal4" data-izimodal-title="タイトル" data-izimodal-subtitle="サブタイトル" data-izimodal-iframeURL="https://www.youtube.com/embed/C-43sV-kLM4">
-    </div>
-    <div class="iziModal4" data-izimodal-title="タイトル" data-izimodal-subtitle="サブタイトル" data-izimodal-iframeURL="https://www.youtube.com/embed/C-43sV-kLM4">
-      <div style="text-align: center;padding-top: 32px;padding-bottom: 32px;">
-        <button class="square_btn" data-iziModal-open=".iziModal0">戻る</button>
-      </div>
-    </div>
+  <div class="iziModal_iframe" data-izimodal-iframeURL="https://www.youtube.com/embed/C-43sV-kLM4">
   </div>
 </body>
 
