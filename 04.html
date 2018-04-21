@@ -15,8 +15,6 @@
         loop: true,
         headerColor: "#91b500",
       });
-    })
-    $(function() {
       $(".iziModal_iframe").iziModal({
         iframe: true,
         fullscreen: true,
@@ -24,6 +22,10 @@
         background: "#ffe400",
         transitionIn: "bounceInDown",
         transitionOut: "bounceOutDown",
+      });
+      iziToast.show({
+        title: 'Hey',
+        message: 'What would you like to add?'
       });
     })
   </script>
