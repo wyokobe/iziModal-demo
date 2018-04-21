@@ -18,9 +18,45 @@
         transitionIn: "bounceInDown",
         transitionOut: "bounceOutDown"
       });
-      iziToast.show({
-        title: 'Hey',
-        message: 'What would you like to add?'
+      $(".trigger-info").on('click', function(event) {
+        event.preventDefault();
+        // info
+        iziToast.info({
+          title: 'Infoカラー',
+          message: 'iziToast.info()',
+          position: 'bottomLeft',
+          transitionIn: 'bounceInRight',
+        });
+      });
+      $(".trigger-success").on('click', function(event) {
+        event.preventDefault();
+        // success
+        iziToast.success({
+          title: 'Successカラー',
+          message: 'iziToast.success()',
+          position: 'bottomRight',
+          transitionIn: 'bounceInLeft',
+        });
+      });
+      $(".trigger-warning").on('click', function(event) {
+        event.preventDefault();
+        // warning
+        iziToast.warning({
+          title: 'Warningカラー',
+          message: 'iziToast.warning()!',
+          position: 'topLeft',
+          transitionIn: 'bounceInRight',
+        });
+      });
+      $(".trigger-error").on('click', function(event) {
+        event.preventDefault();
+        // error
+        iziToast.error({
+          title: 'Errorカラー',
+          message: 'iziToast.error()',
+          position: 'topRight',
+          transitionIn: 'bounceInLeft',
+        });
       });
     })
   </script>
@@ -30,6 +66,21 @@
   <a href="index.html">TOP</a>
   <br>
   <style>
+    .btn {
+      display: inline-block;
+      z-index: 1;
+      top: 60px;
+      margin: 10px;
+      margin-right: 30px;
+      background: #fafafa;
+      padding: 7px 15px;
+      font-size: 12px;
+      color: #555;
+      border-radius: 2px;
+      cursor: pointer;
+      border: 1px solid #ddd;
+    }
+
     .square_btn {
       display: inline-block;
       padding: 0.5em 1em;
@@ -49,6 +100,12 @@
   </style>
   <div style="text-align: center;padding-top: 64px;">
     モーダル(iframe)デモ
+  </div>
+  <div style="text-align: center;padding-top: 64px;">
+    <button class="btn trigger-info">Info</button>
+    <button class="btn trigger-success">Success</button>
+    <button class="btn trigger-warning">Warning</button>
+    <button class="btn trigger-error">Error</button>
   </div>
   <div style="text-align: center;padding-top: 64px;">
     <button class="square_btn" data-iziModal-open=".iziModal_iframe">オーバーロードⅡ OP / Overlord Season 2 Opening Full『OxT - GO CRY GO』(ENG SUB)</button>
