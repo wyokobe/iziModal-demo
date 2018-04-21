@@ -1,3 +1,6 @@
 [submodule "iziModal"]
 	path = iziModal
 	url = https://github.com/dolce/iziModal.git
+[submodule "iziToast"]
+	path = iziToast
+	url = https://github.com/dolce/iziToast.git
