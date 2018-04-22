@@ -7,12 +7,9 @@
     $(".iziModal_iframe").iziModal({
       iframe: true,
       fullscreen: true,
+      group: "group01",
+      loop: true,
       title: ".iziModal_iframe",
-    });
-    $(".iziModal_iframe2").iziModal({
-      iframe: true,
-      fullscreen: true,
-      title: ".iziModal_iframe2",
     });
   })
 </script>
@@ -20,7 +17,4 @@
 <button data-izimodal-open=".iziModal_iframe">ボタン</button>
 
 <div class="iziModal_iframe" data-izimodal-iframeURL="https://www.youtube.com/embed/C-43sV-kLM4"></div>
-
-<button data-izimodal-open=".iziModal_iframe2">ボタン</button>
-
-<div class="iziModal_iframe2" data-izimodal-iframeURL="https://embed.nicovideo.jp/watch/sm32560965"></div>
+<div class="iziModal_iframe" data-izimodal-iframeURL="https://embed.nicovideo.jp/watch/sm32560965"></div>
