@@ -1,0 +1,43 @@
+<link rel="stylesheet" type="text/css" href="./css/iziModal.css" media="screen" />
+<script type="text/javascript" src="./js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="./js/jquery-migrate-3.0.1.js"></script>
+<script type="text/javascript" src="./js/iziModal.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $(".iziModal1").iziModal({
+      title:".iziModal1",
+      transitionIn:"fadeInLeft",
+      transitionOut:"fadeOutDown",
+    });
+    $(".iziModal2").iziModal({
+      title:".iziModal2",
+      transitionIn:"fadeInDown",
+      transitionOut:"fadeOutLeft",
+    });
+    $(".iziModal3").iziModal({
+      title:".iziModal3",
+      transitionIn:"fadeInRight",
+      transitionOut:"fadeOutUp",
+    });
+    $(".iziModal4").iziModal({
+      title:".iziModal4",
+      transitionIn:"fadeInUp",
+      transitionOut:"fadeOutRight",
+    });
+  })
+</script>
+
+<button data-iziModal-open=".iziModal1">ボタン</button>
+
+<div class="iziModal1" style="margin-right: 0px; margin-top: 0px;" data-izimodal-open=".iziModal2">
+  <p>コンテンツ</p>
+</div>
+<div class="iziModal2" style="margin-right: 0px; margin-bottom: 0px;" data-izimodal-open=".iziModal3">
+  <p>コンテンツ</p>
+</div>
+<div class="iziModal3" style="margin-left: 0px; margin-bottom: 0px;" data-izimodal-open=".iziModal4">
+  <p>コンテンツ</p>
+</div>
+<div class="iziModal4" style="margin-left: 0px; margin-top: 0px;" data-izimodal-open=".iziModal1">
+  <p>コンテンツ</p>
+</div>
