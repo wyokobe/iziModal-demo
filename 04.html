@@ -1,76 +1,62 @@
-<html>
+<link rel="stylesheet" type="text/css" href="./css/iziModal.css" media="screen" />
+<script type="text/javascript" src="./js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="./js/jquery-migrate-3.0.1.js"></script>
+<script type="text/javascript" src="./js/iziModal.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $(".iziModal").iziModal();
+    $(".iziModal2").iziModal({
+      title: "タイトル",
+      subtitle: "サブタイトル",
+    });
+    $(".iziModal_group").iziModal({
+      group: "group01",
+      loop: true,
+    });
+    $(".iziModal_group2").iziModal();
+    $(".iziModal_iframe").iziModal({
+      iframe: true,
+      fullscreen: true,
+    });
+  })
+</script>
 
-<head>
-  <title>モーダル(グループ to iframe)デモ</title>
-  <link rel="stylesheet" type="text/css" href="./css/iziModal.css" media="screen" />
-  <link rel="stylesheet" type="text/css" href="./css/iziToast.css" media="screen" />
-  <script type="text/javascript" src="./js/jquery-3.3.1.js"></script>
-  <script type="text/javascript" src="./js/jquery-migrate-3.0.1.js"></script>
-  <script type="text/javascript" src="./js/iziModal.js"></script>
-  <script type="text/javascript" src="./js/iziToast.js"></script>
-  <script type="text/javascript">
-    $(function() {
-      $(".iziModal").iziModal({
-        group: "group0",
-        loop: true,
-        headerColor: "#91b500",
-      });
-      $(".iziModal_iframe").iziModal({
-        iframe: true,
-        fullscreen: true,
-        headerColor: "#000",
-        background: "#ffe400",
-        transitionIn: "bounceInDown",
-        transitionOut: "bounceOutDown",
-      });
-      iziToast.show({
-        title: 'Hey',
-        message: 'What would you like to add?'
-      });
-    })
-  </script>
-</head>
+<button data-izimodal-open=".iziModal">ボタン</button>
+<a href="#" data-izimodal-open=".iziModal">リンク</a>
+<img src="img/hogehoge.jpg" data-izimodal-open=".iziModal"/>
+<div class="iziModal" data-izimodal-title="タイトル" data-izimodal-subtitle="サブタイトル">
+  <p>コンテンツ</p>
+</div>
 
-<body>
-  <a href="index.html">TOP</a>
-  <br>
-  <style>
-    .square_btn {
-      display: inline-block;
-      padding: 0.5em 1em;
-      text-decoration: none;
-      background: #668ad8;
-      color: #FFF;
-      border-bottom: solid 4px #627295;
-      border-radius: 3px;
-    }
+<br>
 
-    .square_btn:active {
-      -ms-transform: translateY(4px);
-      -webkit-transform: translateY(4px);
-      transform: translateY(4px);
-      border-bottom: none;
-    }
-  </style>
-  <div style="text-align: center;padding-top: 64px;">
-    モーダル(グループ to iframe)デモ
-  </div>
-  <div style="text-align: center;padding-top: 64px;">
-    <button class="square_btn" data-iziModal-open=".iziModal">モーダル(グループ)toモーダル(iframe)デモ</button>
-  </div>
-  <div class="iziModal" data-izimodal-title="ボタンデモ">
-    <div style="text-align: center;padding-top: 64px;padding-bottom: 64px;">
-      <button class="square_btn" data-iziModal-open=".iziModal_iframe">オーバーロードⅡ　ＯＰ中毒になる動画</button>
-    </div>
-  </div>
-  <div class="iziModal" data-izimodal-title="リンクデモ">
-    <div style="text-align: center;padding-top: 64px;padding-bottom: 64px;">
-      <a href="#" data-iziModal-open=".iziModal_iframe">オーバーロードⅡ　ＯＰ中毒になる動画</a>
-    </div>
-  </div>
-  <div class="iziModal_iframe" data-izimodal-iframeURL="https://embed.nicovideo.jp/watch/sm32560965">
-  </div>
+<button data-izimodal-open=".iziModal2">ボタン</button>
+<div class="iziModal2">
+  <p>コンテンツ</p>
+</div>
 
-</body>
+<br>
 
-</html>
+<button data-izimodal-open=".iziModal_group">ボタン</button>
+<div class="iziModal_group">
+  <p>コンテンツ1</p>
+</div>
+<div class="iziModal_group">
+  <p>コンテンツ2</p>
+</div>
+
+<br>
+
+<button data-izimodal-open=".iziModal_group2">ボタン</button>
+<div class="iziModal_group2" data-izimodal-group="group02" data-izimodal-loop=true>
+  <p>コンテンツ1</p>
+</div>
+<div class="iziModal_group2" data-izimodal-group="group02" data-izimodal-loop=true>
+  <p>コンテンツ2</p>
+</div>
+
+<br>
+
+<button data-iziModal-open=".iziModal_iframe">ボタン</button>
+<div class="iziModal_iframe" data-izimodal-iframeURL="https://www.youtube.com/embed/C-43sV-kLM4"/>
+</div>
